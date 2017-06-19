@@ -40,4 +40,10 @@ class ReadThreadsTest extends TestCase
         $this->get('/threads/'.$this->thread->id)
             ->assertSee($reply->body);
     }
+
+    public function test_a_user_can_see_thread_creator_name()
+    {
+        $response = $this->get('/threads/'.$this->thread->id);
+        $response->assertSee($this->thread->creator->name);
+    }
 }

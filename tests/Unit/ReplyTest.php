@@ -15,7 +15,7 @@ class ReplyTest extends TestCase
      *
      * @return void
      */
-    public function test_it_has_owner()
+    public function test_a_reply_has_owner()
     {
         $reply = factory('App\Reply')->create();
 
